@@ -1,0 +1,36 @@
+.city-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.temperature {
+  font-size: 40px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+.container {
+  font-family: "Poppins", sans-serif;
+}
+.weather {
+  border: 1px solid #dadde1;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  border-radius: 10px;
+}
+.search-form {
+  margin-bottom: 50px;
+}
+
+.weather-icon {
+  max-width: 70px;
+}
+
+.sunny-icon {
+  color: #ffc107;
+  font-size: 50px !important;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: lighter;
+}
