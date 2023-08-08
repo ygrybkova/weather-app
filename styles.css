@@ -34,3 +34,6 @@ h2 {
   font-size: 15px;
   font-weight: lighter;
 }
+a {
+  text-decoration: none;
+}
