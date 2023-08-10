@@ -6,6 +6,7 @@
   font-size: 40px;
   font-weight: bolder;
   margin-bottom: 50px;
+  margin-left: 10px;
 }
 .container {
   font-family: "Poppins", sans-serif;
@@ -41,4 +42,8 @@ h2 {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 50px;
 }
