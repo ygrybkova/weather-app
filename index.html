@@ -59,20 +59,30 @@
           </div>
         </form>
 
-        <h1 id="city"></h1>
-        <h2 id="date"></h2>
-        <p id="description"></p>
+        <div class="overview">
+          <h1 id="city"></h1>
+          <ul>
+            <li>Last updated: <span id="date"></span></li>
+            <li id="description"></li>
+          </ul>
+        </div>
         <div class="row">
           <div class="col">
             <div class="d-flex weather-temperature">
               <img
-                src="https://cdn3.iconfinder.com/data/icons/meteocons/512/sun-symbol-512.png"
+                src=" https://openweathermap.org/img/wn/01d@2x.png"
                 alt="Clear"
                 id="icon"
               />
               <div>
                 <strong class="temperature" id="temperature"></strong
                 ><span class="units"> °C</span>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
               </div>
             </div>
           </div>

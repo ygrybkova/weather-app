@@ -1,23 +1,35 @@
 //Date
-let now = new Date();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let h2 = document.querySelector("h2");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
 
-let hours = now.getHours();
-let minutes = now.getMinutes();
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-h2.innerHTML = `${day} ${hours}:${minutes}`;
+  return days[day];
+}
 
 function searchCity(city) {
   let apiKey = "073a85a5a2f68195b947922b37e5a0cd";
@@ -50,6 +62,9 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
